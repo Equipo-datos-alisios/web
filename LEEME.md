@@ -12,7 +12,7 @@ Esta carpeta es la web completa. No hay que instalar nada: son archivos de texto
 ## 1. Publicar la web (una sola vez)
 
 **a) Cuenta y repositorio en GitHub (gratis)**
-1. Cree una cuenta en github.com. Conviene usar equipo@datosalisios.com y un nombre de usuario como `datosalisios`.
+1. Cree una cuenta en github.com con equipo@datosalisios.com. El usuario elegido es `Equipo-datos-alisios`.
 2. Pulse **New repository**. Nombre: `web`. Márquelo como **Public** (con el plan gratuito, GitHub Pages solo funciona con repositorios públicos). Cree el repositorio.
 3. Pulse **uploading an existing file**, arrastre todos los archivos de esta carpeta (no la carpeta, sino su contenido) y pulse **Commit changes**.
 
@@ -27,7 +27,7 @@ En OVH: **Dominios → datosalisios.com → Zona DNS**.
 2. **No toque** los registros `MX`, `TXT` ni los de nombre `_domainkey` o similares: son los del correo.
 3. Añada cuatro registros de tipo `A` para el dominio principal (campo subdominio vacío), uno por cada IP:
    `185.199.108.153` · `185.199.109.153` · `185.199.110.153` · `185.199.111.153`
-4. Añada un registro `CNAME` para `www` que apunte a `SU-USUARIO.github.io.` (sustituya por el usuario de GitHub, por ejemplo `datosalisios.github.io.`).
+4. Añada un registro `CNAME` para `www` que apunte a `equipo-datos-alisios.github.io.` (es el usuario de GitHub en minúsculas, seguido de `.github.io.`; mantenga el punto final si OVH lo pide).
 5. Espere. Los cambios de DNS pueden tardar hasta 24 horas.
 6. Cuando GitHub reconozca el dominio, en **Settings → Pages** marque **Enforce HTTPS**.
 
@@ -46,13 +46,23 @@ En OVH: **Dominios → datosalisios.com → Zona DNS**.
 
 Para **añadir** un servicio, proyecto o persona, copie un bloque completo y péguelo debajo. Para **deshacer** un error, abra el archivo, pulse **History** y restaure la versión anterior.
 
-## 3. Cambiar la identidad visual
+## 3. Subir archivos nuevos o cambiados (por ejemplo, desde esta carpeta)
 
-En la primera etiqueta de `index.html` (`<html lang="es" data-tema="A">`) cambie `A` por `B` o `C`. Haga lo mismo en `aviso-legal.html` y `privacidad.html`.
+1. Entre en el repositorio en GitHub y pulse **Add file → Upload files**.
+2. Arrastre los archivos que han cambiado (no la carpeta). Si ya existe un archivo con el mismo nombre, GitHub lo sustituye.
+3. Pulse **Commit changes**. En uno o dos minutos la web está actualizada. Si no ve el cambio, recargue con Ctrl+F5.
+
+Para añadir una foto, súbala igual y use el nombre que haya puesto en `index.html`.
+
+## 3 bis. Cambiar colores o tipo de letra
+
+Los colores y la letra están en las primeras líneas de `styles.css`, en el bloque `:root`. Cambie el código de color (por ejemplo `#1F3A5F`) y suba el archivo como en el punto anterior.
+
+Paleta actual: azul atlántico `#1F3A5F`, verde azulado `#2E8B8B`, arena `#C9A66B` y bruma `#CFE8E8`. Letra: Inter.
 
 ## 4. Antes de dar la web por terminada
 
 - Confirmar con cada cliente qué proyectos se pueden mostrar y con qué nombre.
 - Rellenar los datos entre corchetes del aviso legal y de la política de privacidad, y pedir a una gestoría que los revise.
 - Añadir las fotos (instrucciones en el comentario de la sección Nosotros).
-- Cuando se elija identidad, quitar de la línea de Google Fonts las familias que sobren, para que cargue más rápido.
+- La letra Inter se carga desde los servidores de Google. Más adelante conviene alojarla en la propia web, por privacidad.
