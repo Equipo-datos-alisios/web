@@ -149,6 +149,8 @@ section[id] { scroll-margin-top: 16px; }
 .foto .iniciales { font-family: var(--head-font); font-weight: var(--head-w); font-size: var(--h2); letter-spacing: var(--head-ls); }
 .foto .aviso { font-size: 13px; }
 .persona-texto { flex: 1 1 260px; display: flex; flex-direction: column; gap: 10px; }
+.persona-texto .linkedin { align-self: flex-start; display: inline-flex; color: var(--muted); margin-top: -4px; }
+.persona-texto .linkedin:hover, .persona-texto .linkedin:focus-visible { color: var(--teal-text); }
 .persona-texto .cargo { font-size: 15px; font-weight: 600; color: var(--teal-text); }
 .persona-texto p { font-size: 16px; color: var(--muted); }
 .persona-texto .herramientas { font-size: 14px; color: var(--muted); }
